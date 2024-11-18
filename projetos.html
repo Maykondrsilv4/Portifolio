@@ -5,20 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos</title>
     <link rel="stylesheet" href="./styles/style.css">
+
+     <!-- Link para Font Awesome (para os ícones) -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="video-fundo">
+        <video autoplay muted loop id="video-fundo">
+            <source src="assets/estrelas3.mp4" type="video/mp4">
+            Seu navegador não suporta o formato de vídeo.
+        </video>
+    </div>
+        <!-- Cabeçalho -->
     <header class="cabecalho">
         <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__link" href="index.html">Home</a>
-            <a class="cabecalho__menu__link" href="About.html">Sobre mim</a>
-            <a class="cabecalho__menu__link" href="projetos.html">Projetos</a>
-            <a class="cabecalho__menu__link" href="Curriculo/Curriculo-Maykon Douglas.pdf">Curriculo</a>
+            <a class="cabecalho__menu__link" href="index.html">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a class="cabecalho__menu__link" href="about.html">
+                <i class="fas fa-user"></i> Sobre mim
+            </a>
+            <a class="cabecalho__menu__link" href="projetos.html">
+                <i class="fas fa-cogs"></i> Projetos
+            </a>
+            <a class="cabecalho__menu__link" href="curriculo.html">
+                <i class="fas fa-file-alt"></i> Currículo
+            </a>
         </nav>
-</header>
+    </header>
 
-<div><img class="Alurabook" src="./assets/Alurabook.png" alt="Alurabook">
-<img class="Aluraplus" src="./assets/Aluraplus.png" alt="Aluraplus"></div>
-<div><a class="link" href="https://maykondrsilv4.github.io/alurabook/"><strong>Livraria fictício - AluraBooks</strong></a>
-<a class="link_2" href="https://lnkd.in/ecSS-f2f"><strong>Site fictício - Aluraplus</strong></a></div>
+    <main class="projetos-container">
+        <h1>Projetos</h1>
+        <div class="projetos-grid">
+            <div class="projeto">
+                <img src="./assets/Alurabook.png" alt="Alurabook">
+                <a class="link" href="https://maykondrsilv4.github.io/alurabook/"><strong>Livraria fictícia - AluraBooks</strong></a>
+            </div>
+            <div class="projeto">
+                <img src="./assets/Aluraplus.png" alt="Aluraplus">
+                <a class="link" href="https://aluraplus-plum-sigma.vercel.app/"><strong>Site fictício - Aluraplus</strong></a>
+            </div>
+            <div class="projeto">
+                <img src="./assets/jogodonumerosecreto.png" alt="Jogo do número secreto">
+                <a class="link" href="https://jogo-do-numero-secreto-pwm6.vercel.app/"><strong>Jogo do número secreto</strong></a>
+            </div>
+            <div class="projeto">
+                <img src="./assets/calculadoradeimc.png" alt="Calculadora de IMC">
+                <a class="link" href="https://calculadora-de-imc-sandy.vercel.app/"><strong>Calculadora de IMC</strong></a>
+            </div>
+        </div>
+    </main>   
+
+    <footer>
+        <p>&copy; 2024 Maykon | Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>

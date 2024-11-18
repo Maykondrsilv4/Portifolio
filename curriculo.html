@@ -3,18 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculo</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <title>Currículo</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Vídeo de fundo -->
+    <div class="video-fundo">
+        <video autoplay muted loop id="video-fundo">
+            <source src="assets/estrelas3.mp4" type="video/mp4">
+            Seu navegador não suporta o formato de vídeo.
+        </video>
+    </div>
+
+    <!-- Cabeçalho -->
     <header class="cabecalho">
-            <nav class="cabecalho__menu">
-                <a class="cabecalho__menu__link" href="index.html">Home</a>
-                <a class="cabecalho__menu__link" href="About.html">Sobre mim</a>
-                <a class="cabecalho__menu__link" href="projetos.html">Projetos</a>
-                <a class="cabecalho__menu__link" href="Curriculo/Curriculo-Maykon Douglas.pdf">Curriculo</a>
-            </nav>
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a class="cabecalho__menu__link" href="about.html">
+                <i class="fas fa-user"></i> Sobre mim
+            </a>
+            <a class="cabecalho__menu__link" href="projetos.html">
+                <i class="fas fa-cogs"></i> Projetos
+            </a>
+            <a class="cabecalho__menu__link" href="curriculo.html">
+                <i class="fas fa-file-alt"></i> Currículo
+            </a>
+        </nav>
     </header>
-    
+
+    <!-- Seção de Currículo -->
+    <main>
+        <section class="curriculo">
+            <div class="curriculo__conteudo">
+                <h1 class="curriculo__conteudo__titulo">Currículo de Maykon</h1>
+                <p class="curriculo__conteudo__descricao">Baixe meu currículo e conheça mais sobre minha trajetória profissional.</p>
+
+                <!-- Ícone de Currículo -->
+                <a href="Curriculo/Curriculo.pdf" class="icone-curriculo" download>
+                    <img src="assets/curriculo.png" alt="Ícone de Currículo">
+                    <p>Download CV</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Maykon | Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>

@@ -3,26 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mim</title>
+    <title>Sobre Mim</title>
     <link rel="stylesheet" href="./styles/style.css">
+
+     <!-- Link para Font Awesome (para os ícones) -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="video-fundo">
+        <video autoplay muted loop id="video-fundo">
+            <source src="assets/estrelas3.mp4" type="video/mp4">
+            Seu navegador não suporta o formato de vídeo.
+        </video>
+    </div>
+    <!-- Cabeçalho -->
     <header class="cabecalho">
         <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__link" href="index.html">Home</a>
-            <a class="cabecalho__menu__link" href="About.html">Sobre mim</a>
-            <a class="cabecalho__menu__link" href="projetos.html">Projetos</a>
-            <a class="cabecalho__menu__link" href="Curriculo/Curriculo-Maykon Douglas.pdf">Curriculo</a>
+            <a class="cabecalho__menu__link" href="index.html">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a class="cabecalho__menu__link" href="about.html">
+                <i class="fas fa-user"></i> Sobre mim
+            </a>
+            <a class="cabecalho__menu__link" href="projetos.html">
+                <i class="fas fa-cogs"></i> Projetos
+            </a>
+            <a class="cabecalho__menu__link" href="curriculo.html">
+                <i class="fas fa-file-alt"></i> Currículo
+            </a>
         </nav>
     </header>
 
     <main class="apresentacao">
         <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">Sobre mim</h1>
-            <p class="apresentacao__conteudo__texto">Tenho 27 anos, atualmente estou cursando Análise e Desenvolvimento de Sistemas, desenvolvedor proficiente em JavaScript, Python, CSS, HTML, especializado na criação de interfaces web dinâmicas e responsivas. Atualmente cursando Análise e Desenvolvimento de Sistemas, com habilidades analíticas sólidas e uma mentalidade orientada para solucionar problemas, o que permite enfrentar desafios de forma criativa e eficaz. Busco oportunidades para aplicar minhas habilidades técnicas em projetos inovadores. Tenho paixão pela programação e capacidade de transformar conceitos em realidade.
+            <h1 class="apresentacao__conteudo__titulo">Sobre Mim</h1>
+            <p class="apresentacao__conteudo__texto">
+                Olá, meu nome é Maykon, tenho 27 anos e atualmente estou no quarto semestre de Análise e Desenvolvimento de Sistemas. Desde criança, sempre fui apaixonado por tecnologia e pela área de games. Em 2022, conheci um amigo chamado Daniel, que me apresentou o universo de trabalho na área de tecnologia, despertando em mim uma paixão ainda maior. Desde então, não parei de buscar meu objetivo: construir uma carreira sólida na área da tecnologia. Sou um desenvolvedor proficiente em JavaScript, Python, CSS e HTML, especializado na criação de interfaces web dinâmicas e responsivas. Possuo habilidades analíticas sólidas e uma mentalidade voltada para a solução de problemas, permitindo-me enfrentar desafios de forma criativa e eficaz, com um olhar atento aos detalhes e uma abordagem estratégica, estou determinado a transformar ideias em realidade. Estou constantemente me atualizando sobre novas tecnologias e ferramentas, acreditando que o aprendizado contínuo é essencial para o sucesso nesta área, trabalhar em equipe e colaborar com pessoas que compartilham a mesma paixão pela inovação são motivações que me impulsionam a crescer e alcançar metas ainda mais ambiciosas, estou em busca de oportunidades para aplicar habilidades técnicas em projetos inovadores.
+            </p>
         </section>
         <img class="apresentacao__imagem" src="./assets/imagem.jpg" alt="Foto do Maykon">
-    </main>
-
+    </main>   
+       <!-- Rodapé -->
+        
+       <footer>
+               <p>&copy; 2024 Maykon | Todos os direitos reservados.</p>
+           </footer> 
 </body>
 </html>

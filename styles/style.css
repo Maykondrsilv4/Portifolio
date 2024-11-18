@@ -1,150 +1,378 @@
-@import url('https://fonts.googleapis.com/css2?family=krona+One&family=Montserrat:wght@400;600&display=swap');
+/* Importação das fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
-
+/* Definição de variáveis de cores e fontes */
 :root {
-    --cor-primaria: #006989;
-    --cor-secundaria: #FFF5E1;
-    --cor-terciaria: #EF9C66; 
-    --cor-hover: #FFCBCB;
-
+    --cor-primaria: #8EACCD;
+    --cor-secundaria: #F8FAE5;
+    --cor-terciaria: #3EDBF0;
+    --cor-hover: #08c3fc;
+    --cor-black: #000000;
+    --cor-texto: #F8FAE5;
+    --cor-footer: #8EACCD;
     --fonte-primaria: 'Krona One', sans-serif;
-    --fonte-secundaria: 'Monteserrat', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
 }
 
-
-* {
+/* Remover rolagem de tela */
+html, body {
+    overflow: hidden; /* Remove a rolagem horizontal e vertical */
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
-body {
+/* Reseta as margens e preenchimentos padrão de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
 }
 
+/* Estilo para o corpo da página */
+body {
+    background-position: center;
+    background-size: cover;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 60px;
+}
+
+/* Cabeçalho */
 .cabecalho {
-    padding: 2% 0% 0% 15%;
+    position: relative;
+    z-index: 1;
+    width: 100%;
 }
 
 .cabecalho__menu {
     display: flex;
-    gap: 80px;
+    justify-content: center;
+    background-color: var(--cor-primaria);
+    padding: 9px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .cabecalho__menu__link {
-    font-family: var(--fonte-secundaria);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--cor-terciaria);
+    color: var(--cor-black);
+    font-size: 18px;
     text-decoration: none;
+    margin: 0 17px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
+.cabecalho__menu__link:hover {
+    color: var(--cor-hover);
+}
+
+.cabecalho__menu__link i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+/* Estilo da caixa de links */
+.caixa-links {
+    background-color: var(--cor-secundaria);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Seção de apresentação */
 .apresentacao {
     padding: 5% 15%;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 82px;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
+    text-align: center;
 }
 
+/* Ajuste nos links de navegação para melhorar a aparência */
+.apresentacao__links__navegacao {
+    display: flex;
+    align-items: center;
+    gap: 8px;            /* Espaço entre o ícone e o texto */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-texto);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 7px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.apresentacao__links__navegacao:hover {
+    background-color: var(--cor-hover);
+    color: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+/* Estilo para os ícones de redes sociais e currículo */
+.apresentacao__links__navegacao img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(31%) sepia(100%) saturate(300%) hue-rotate(165deg) brightness(102%) contrast(98%); /* Cor personalizada */
+}
+
+/* Estilo do conteúdo da seção de apresentação */
 .apresentacao__conteudo {
-    width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
+    align-items: center;
 }
 
 .apresentacao__conteudo__titulo {
-    font-size: 2.25rem;
-    font-family: var(--fonte-primaria);
+    font-size: 36px;
+    font-weight: bold;
 }
 
 .titulo-destaque {
     color: var(--cor-terciaria);
+    font-weight: bold;
 }
 
 .apresentacao__conteudo__texto {
-    font-size: 1.5rem;
-    font-family: var(--fonte-secundaria);
-}
-
-.apresentacao__links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 32px;
-}
-
-.apresentacao__links__subtitulo {
-    font-family: var(--fonte-primaria);
-    font-weight: 400;
-    font-size: 1.5rem;
-}
-
-.apresentacao__links__navegacao {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    border: 2px solid var(--cor-terciaria);
-    width: 50%;
-    text-align: center;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 21.5px 0;
-    text-decoration: none;
-    color: var(--cor-secundaria);
-    font-family: var(--fonte-secundaria);
-}
-
-.apresentacao__links__link:hover {
-    background-color: var(--cor-hover);
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-top: 20px;
+    color: var(--cor-texto);
 }
 
 .apresentacao__imagem {
-    width: 50%;
-}
-.Alurabook {
-    width: 40%;
-    padding: 4%;
-}
-
-.Aluraplus {
-    width: 43%;
-    padding: 4%;
+    width: 35%;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 1s ease-out;
 }
 
+/* Ajuste para a disposição dos links de redes sociais e currículo */
+.apresentacao__links__container {
+    display: flex;
+    flex-direction: row; /* Organiza os links lado a lado */
+    gap: 20px;           /* Espaço entre os links */
+    justify-content: center; /* Centraliza o conteúdo */
+    margin-top: 10px;    /* Espaço entre o título e os links */
+}
+
+/* Estilo do título da seção de projetos */
+.projetos-container h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Estilo de cada projeto */
+.projeto {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-black);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    height: 310px; /* Altura consistente */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
+}
+
+/* Estilo das imagens no projeto */
+.projeto img {
+    width: 100%;
+    height: 94%;
+    object-fit: cover; /* Preenche o espaço sem distorção */
+    border-radius: 0; /* Remove bordas arredondadas */
+    box-shadow: none; /* Remove sombras */
+    margin: 0;
+}
+
+/* Estilo dos links nos projetos */
 .link {
-    padding: 0 0 0 12%;
-    font-size: 2.2rem;
+    font-size: 1.1rem;
+    color: var(--cor-texto);
     text-decoration: none;
-    text-align: center;
+    font-weight: 600;
+    margin-top: auto;
 }
 
-.link_2 {
-    padding: 0 0 0 32%;
-    font-size: 2.2rem;
+/* Efeito de hover nos links dos projetos */
+.link:hover {
+    color: var(--cor-hover);
+}
+
+/* Estilo para a seção de Currículo */
+.curriculo {
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+/* Estilo do ícone de currículo */
+.icone-curriculo {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icone-curriculo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.icone-curriculo p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.icone-curriculo:hover {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao ícone */
+}
+
+.icone-curriculo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: var(--cor-terciaria);
+    color: var(--cor-black);
+}
+
+/* Adicionando um efeito de brilho no ícone */
+.icone-curriculo img:hover {
+    filter: brightness(1.2);
+}
+
+/* Estilo para o título da seção de Currículo */
+.curriculo__conteudo__titulo {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--cor-terciaria);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+/* Descrição abaixo do título */
+.curriculo__conteudo__descricao {
+    font-size: 1.2rem;
+    color: var(--cor-texto);
+    max-width: 800px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Estilo para os ícones de Currículo */
+.icone-curriculo {
+    display: inline-block;
+    margin-top: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 8px;
+    padding: 10px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
     text-decoration: none;
+}
+
+/* Definindo o vídeo como fundo */
+.video-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Garante que o vídeo cubra toda a largura da viewport */
+    height: 100vh; /* Garante que o vídeo cubra toda a altura da viewport */
+    z-index: -1; /* Mantém o vídeo no fundo */
+    object-fit: cover;
+}
+
+
+/* Estilo do rodapé */
+footer {
+    background-color: var(--cor-footer);
+    color: var(--cor-black);
     text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+    z-index: 1;
 }
 
-@media (max-width: 1200px) {
-    .cabecalho {
-        padding: 10%;
-    }
-    
-    .cabecalho__menu {
-        justify-content: center;
+/* Animações */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Animação de zoom */
+@keyframes zoomIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .curriculo__conteudo__titulo {
+        font-size: 2.2rem;
     }
 
-    .apresentacao {
-        flex-direction: column-reverse;
-        padding: 5%;
+    .curriculo__conteudo__descricao {
+        font-size: 1rem;
     }
 
-    .apresentacao__conteudo {
-        width: auto;
+    .icone-curriculo {
+        padding: 8px;
+    }
+
+    .icone-curriculo img {
+        width: 40px;
+        height: 40px;
     }
 }
+
+
+
+
+

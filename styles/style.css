@@ -14,13 +14,12 @@
     --fonte-secundaria: 'Montserrat', sans-serif;
 }
 
-/* Remover rolagem de tela */
 html, body {
-    overflow: hidden; /* Remove a rolagem horizontal e vertical */
     width: 100%;
-    height: 100%;
+    height: auto; /* Permite que a altura seja definida pelo conteúdo */
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Apenas esconde a rolagem horizontal */
 }
 
 /* Reseta as margens e preenchimentos padrão de todos os elementos */
@@ -318,15 +317,15 @@ body {
     text-decoration: none;
 }
 
-/* Definindo o vídeo como fundo */
 .video-fundo {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* Garante que o vídeo cubra toda a largura da viewport */
-    height: 100vh; /* Garante que o vídeo cubra toda a altura da viewport */
-    z-index: -1; /* Mantém o vídeo no fundo */
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
+    z-index: -1;
+    pointer-events: none; /* Impede que o vídeo interfira na interação com a página */
 }
 
 
@@ -411,7 +410,7 @@ footer {
         gap: 10px;
     }
 
-    /* Seção de projetos */
+    /* Ajustes para o grid de projetos */
     .projetos-grid {
         grid-template-columns: 1fr; /* Apenas uma coluna */
         gap: 20px;
@@ -420,6 +419,7 @@ footer {
     .projeto {
         max-width: 100%; /* Usa todo o espaço disponível */
         height: auto; /* Permite flexibilidade na altura */
+        margin-bottom: 20px; /* Adiciona um espaço entre os projetos */
     }
 
     .projeto img {
@@ -449,8 +449,6 @@ footer {
         font-size: 0.9rem;
     }
 }
-
-
 
 
 
